@@ -1,25 +1,12 @@
 import React, { useRef } from "react";
 import { AiOutlineCloudUpload } from "react-icons/ai";
-import Button from "../component/Button";
+import { useNavigate } from "react-router-dom";
 import axiosInstance from "../config/AxiosInstance";
-import { Navigate, useNavigate } from "react-router-dom";
 export default function AddFood() {
   const name = useRef();
   const price = useRef();
   const image = useRef();
   const navigate = useNavigate();
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     const formData = new FormData();
-  //     formData.append("name", name.current.value);
-  //     formData.append("price", price.current.value);
-  //     formData.append("image", image.current.files[0]);
-
-  //     axiosInstance
-  //       .post("food", formData) // Send the formData
-  //       .then((res) => navigate("/"))
-  //       .catch((err) => console.log(err.response.data.message));
-  //   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,7 +35,7 @@ export default function AddFood() {
         </div>
         <div>
           <label htmlFor="">Foto Menu</label>
-          <div className="relative flex justify-center items-center w-full h-40 bg-[#F8F8F8]">
+          <div className="relative cursor-pointer flex justify-center items-center w-full h-40 bg-[#F8F8F8]">
             <div className="flex flex-col text-zinc-500 items-center">
               <span className="text-[40px]">
                 <AiOutlineCloudUpload />
@@ -59,7 +46,7 @@ export default function AddFood() {
               type="file"
               name="name"
               ref={image}
-              className="absolute opacity-0 left-0 top-0 right-0 bottom-0 w-full h-full"
+              className="absolute cursor-pointer opacity-0 left-0 top-0 right-0 bottom-0 w-full h-full"
             />
           </div>
         </div>

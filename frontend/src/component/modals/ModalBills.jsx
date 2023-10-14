@@ -1,7 +1,7 @@
 import { FormatRupiah } from "@arismun/format-rupiah";
-import React, { useRef, useState } from "react";
-import { CONSTANT } from "../../utils/constant";
+import React, { useState } from "react";
 import axiosInstance from "../../config/AxiosInstance";
+import { CONSTANT } from "../../utils/constant";
 
 export default function ModalBills({ data, fetched, setFetched }) {
   const [show, setShow] = useState(false);
@@ -89,7 +89,7 @@ export default function ModalBills({ data, fetched, setFetched }) {
                   </button>
                 </div>
 
-                {!kembalian || uang < count ? (
+                {!kembalian && uang < count ? (
                   <p className="text-left w-full font-semibold">
                     Uang pembeli tidak cukup
                   </p>

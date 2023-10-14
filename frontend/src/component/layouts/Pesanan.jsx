@@ -43,9 +43,7 @@ export default function Pesanan({ setFetched, fetched }) {
         <div className="w-12 h-12 border-black rounded-full border-2">
           <FaUserTag />
         </div>
-        {data.length <= 0 ? (
-          ""
-        ) : (
+        {data.length > 0 && (
           <div className=" w-full">
             {data?.map((data) => (
               <ListPesanan componentRef={componentRef} key={data} data={data} />

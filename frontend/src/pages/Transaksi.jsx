@@ -26,7 +26,7 @@ export default function Transaksi() {
     <div className="flex lg:flex-row items-start flex-col gap-4 ">
       <div className="lg:w-[65%] grid grid-cols-2 md:grid-cols-3 gap-5 gap-y-4 place-items-center">
         {loading
-          ? [1, 2, 3, 4, 5].map((m) => (
+          ? [1, 2, 3, 4, 5, 6].map((m) => (
               <div
                 key={m}
                 className="h-64 w-full bg-zinc-300 rounded-md animate-pulse"
